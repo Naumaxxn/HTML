@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cal</title>
+<style>
+    body {
+      font-family: Tahoma, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 10px;
+      background-color: White;
+      color: Black;
+      border: Line;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+	text-align: center;
+    }
+  </style>
+  <script>
+    function performAddition() {
+      const num1 = parseInt(document.getElementById("number1").value);
+      const num2 = parseInt(document.getElementById("number2").value);
+      const result = num1 + num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+  function performSub() {
+      const num1 = parseInt(document.getElementById("number1").value);
+      const num2 = parseInt(document.getElementById("number2").value);
+      const result = num1 - num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+ function performMul() {
+      const num1 = parseInt(document.getElementById("number1").value);
+      const num2 = parseInt(document.getElementById("number2").value);
+      const result = num1 * num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+ function performDiv() {
+      const num1 = parseInt(document.getElementById("number1").value);
+      const num2 = parseInt(document.getElementById("number2").value);
+      const result = num1 / num2;
+      document.getElementById("result").innerHTML = "Result: " + result;
+    }
+
+
+  </script>
+</head>
+<body>
+  <h1>Operations of Two Numbers</h1>
+  <form>
+    <label for="number1">Number 1:</label>
+    <input type="text" id="number1" name="number1" /><br />
+
+    <label for="number2">Number 2:</label>
+    <input type="text" id="number2" name="number2" /><br />
+
+    <button type="button" onclick="performAddition()">Add</button>
+    <button type="button" onclick="performSub()">Sub</button>
+    <button type="button" onclick="performMul()">Multiply</button>
+    <button type="button" onclick="performDiv()">Divide</button>
+
+
+  </form>
+  <div id="result"></div>
+</body>
+</html>
